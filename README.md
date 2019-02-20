@@ -1,3 +1,9 @@
+# Camera system
+
+This is a challenge project for Front end position
+
+The main usage is for displaying a grid of devices with sorting capabilities.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
