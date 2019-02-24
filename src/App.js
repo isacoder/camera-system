@@ -10,7 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sortOrder: 'asc', // 'asc', 'desc'
+      sortOrder: 'desc', // 'asc', 'desc'
       groupBy: 'none', // 'none', 'status'
       filterText: '',
       devices: [],
@@ -40,7 +40,7 @@ class App extends Component {
     sortDevicesByName = (devices) => {
       const sortedDevices = devices.slice();
       const { sortOrder } = this.state;
-      sortedDevices.sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : -1);
+      sortedDevices.sort((a, b) => (a.name.toLowerCase() < b.name.toLowerCase()) ? 1 : -1);
       if ( sortOrder === 'desc' ) {
         sortedDevices.reverse();
       }
@@ -105,8 +105,11 @@ class App extends Component {
       if (this.state.groupBy === 'none') {
         return (
           <div className='devices-gallery'>
-            <div className='group-title'>All Devices <span>({devices.length})</span></div>
+            <div className='group-title'>
+              <strong>All Devices</strong>
+              <span>({devices.length})</span>
               <div className='group-division'></div>
+            </div>
             <div className='devices-group'>{sortedDevices.map(this.renderDevice)}</div>
           </div>
         );
@@ -123,11 +126,17 @@ class App extends Component {
         return (
           [
             <div className='devices-gallery'>
-              <div className='group-title'>Active Devices <span>({active.length})</span></div>
-              <div className='group-division'></div>
+              <div className='group-title'>
+                <strong>Active Devices</strong>
+                <span>({active.length})</span>
+                <div className='group-division'></div>
+              </div>
               <div className='devices-group' key='active-devices'>{active.map(this.renderDevice)}</div>
-              <div className='group-title'>Inactive Devices <span>({inactive.length})</span></div>
-              <div className='group-division'></div>
+              <div className='group-title'>
+                <strong>Inactive Devices</strong>
+                <span>({inactive.length})</span>
+                <div className='group-division'></div>
+              </div>
               <div className='devices-group' key='inactive-devices'>{inactive.map(this.renderDevice)}</div>
             </div>
           ]
@@ -162,8 +171,8 @@ class App extends Component {
             </div>
           </div>
           <div className='toggle-filters'>
-            <span onClick={() => this.setSortOrder() }>Sort By Name <i className={this.state.sortOrder}/></span>
-            <span onClick={() => this.setGroupBy() }>Group By <i className={this.state.groupBy}/></span>
+            <span>Sort By Name <i className={this.state.sortOrder} onClick={() => this.setSortOrder() }/></span>
+            <span>Group By Status<i className={this.state.groupBy} onClick={() => this.setGroupBy() }/></span>
           </div>
         </div>
           {this.renderDevices()}

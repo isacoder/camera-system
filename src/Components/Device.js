@@ -8,7 +8,7 @@ export default ({ name, id, thumbnail, active }) => (
       <span className={`status-bar ${active ? ' active-bar' : 'inactive-bar'}`}></span>
       <p>
         <div className='status-text'>{active ? 'active' : 'inactive'}</div>
-        <div clasName='name-text'>{name}</div>
+        <div className='name-text'>{name}</div>
       </p>
       <div className='id-text'> Id #{id}</div>
     </div>
