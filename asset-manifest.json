@@ -1,0 +1,16 @@
+{
+  "main.css": "/camera-system/static/css/main.b91eb923.chunk.css",
+  "main.js": "/camera-system/static/js/main.1b7929c2.chunk.js",
+  "main.js.map": "/camera-system/static/js/main.1b7929c2.chunk.js.map",
+  "runtime~main.js": "/camera-system/static/js/runtime~main.e982da6a.js",
+  "runtime~main.js.map": "/camera-system/static/js/runtime~main.e982da6a.js.map",
+  "static/js/2.66bf866f.chunk.js": "/camera-system/static/js/2.66bf866f.chunk.js",
+  "static/js/2.66bf866f.chunk.js.map": "/camera-system/static/js/2.66bf866f.chunk.js.map",
+  "index.html": "/camera-system/index.html",
+  "precache-manifest.b0afc2562beb193dd7300723a4d626d5.js": "/camera-system/precache-manifest.b0afc2562beb193dd7300723a4d626d5.js",
+  "service-worker.js": "/camera-system/service-worker.js",
+  "static/css/main.b91eb923.chunk.css.map": "/camera-system/static/css/main.b91eb923.chunk.css.map",
+  "static/media/App.css": "/camera-system/static/media/sort-amount-up.fb7edf77.svg",
+  "static/media/logo.svg": "/camera-system/static/media/logo.f22ad071.svg",
+  "static/media/search.svg": "/camera-system/static/media/search.a3ae3d1b.svg"
+}
