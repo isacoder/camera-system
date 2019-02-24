@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/camera-system/static/media/search.a3ae3d1b.svg"
   },
   {
-    "revision": "1b7929c208c38185ae5e",
+    "revision": "7f31cbc8386c6167c632",
     "url": "/camera-system/static/css/main.b91eb923.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/camera-system/static/media/logo.f22ad071.svg"
   },
   {
-    "revision": "1b7929c208c38185ae5e",
-    "url": "/camera-system/static/js/main.1b7929c2.chunk.js"
+    "revision": "7f31cbc8386c6167c632",
+    "url": "/camera-system/static/js/main.7f31cbc8.chunk.js"
   },
   {
     "revision": "fb7edf77d097bdf31355d2066e257cc4",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/camera-system/static/media/layer-group.972803d8.svg"
   },
   {
-    "revision": "db6b4281e96428f9ad8bae9ddc1f5be6",
+    "revision": "93cd0cdcc143fdd1063c9b1edeef1a54",
     "url": "/camera-system/index.html"
   }
 ];
