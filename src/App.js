@@ -104,7 +104,11 @@ class App extends Component {
       const sortedDevices = this.sortDevicesByName(devices);
       if (this.state.groupBy === 'none') {
         return (
-          <ul>{sortedDevices.map(this.renderDevice)}</ul>
+          <div className='devices-gallery'>
+            <div className='group-title'>All Devices <span>({devices.length})</span></div>
+              <div className='group-division'></div>
+            <div className='devices-group'>{sortedDevices.map(this.renderDevice)}</div>
+          </div>
         );
       } else {
         const active = [];
@@ -118,8 +122,14 @@ class App extends Component {
         });
         return (
           [
-            <ul key='active-devices'>{active.map(this.renderDevice)}</ul>,
-            <ul key='inactive-devices'>{inactive.map(this.renderDevice)}</ul>,
+            <div className='devices-gallery'>
+              <div className='group-title'>Active Devices <span>({active.length})</span></div>
+              <div className='group-division'></div>
+              <div className='devices-group' key='active-devices'>{active.map(this.renderDevice)}</div>
+              <div className='group-title'>Inactive Devices <span>({inactive.length})</span></div>
+              <div className='group-division'></div>
+              <div className='devices-group' key='inactive-devices'>{inactive.map(this.renderDevice)}</div>
+            </div>
           ]
         )
       }
@@ -140,7 +150,7 @@ class App extends Component {
             </div>
             <div className='filters-group'>
               <div className='search-filter'>
-              <input type='text' alt='search for devices' placeholder='Search by device name or ID' value={this.state.filterText} onChange={
+              <input type='text' alt='search for devices' placeholder='Search by device name or ID ...' value={this.state.filterText} onChange={
                 (event) => {
                   this.setState({ filterText: event.target.value }, () => {
                     this.filterByText();
@@ -151,15 +161,12 @@ class App extends Component {
               <img src={searchIcon} alt='search icon'/>
             </div>
           </div>
-          <div className='toggle-filter'>
-            <button onClick={() => this.setSortOrder() }>Sort By Name [{this.state.sortOrder}]</button>
-            <button onClick={() => this.setGroupBy() }>Group By [{this.state.groupBy}]</button>
-
+          <div className='toggle-filters'>
+            <span onClick={() => this.setSortOrder() }>Sort By Name <i className={this.state.sortOrder}/></span>
+            <span onClick={() => this.setGroupBy() }>Group By <i className={this.state.groupBy}/></span>
           </div>
         </div>
-        <div className='devices-gallery'>
           {this.renderDevices()}
-        </div>
       </div>
 
     </div>
