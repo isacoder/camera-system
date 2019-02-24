@@ -75,7 +75,8 @@ class App extends Component {
     filterByText = () => {
       const { filterText, devices } = this.state;
       const filteredDevices = devices.filter((device) => {
-        return device.name.toLowerCase().includes(filterText.toLowerCase());
+        console.log('completo:', device.id)
+        return (device.name.toLowerCase().includes(filterText.toLowerCase()) ) || device.id.toString().includes(filterText);
       });
       const visibleDevicesIds = filteredDevices.map((device) => device.id);
       this.setState({ visibleDevicesIds });
